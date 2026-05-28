@@ -68,6 +68,11 @@ jobs:
           ORCHESTRA_API_URL: ${{ secrets.ORCHESTRA_API_URL }}
           ORCHESTRA_SYNC_API_KEY: ${{ secrets.ORCHESTRA_SYNC_API_KEY }}
         run: |
+          if [ -z "$ORCHESTRA_API_URL" ] || [ -z "$ORCHESTRA_SYNC_API_KEY" ]; then
+            echo "Orchestra sync skipped: ORCHESTRA_API_URL and ORCHESTRA_SYNC_API_KEY secrets are not configured."
+            exit 0
+          fi
+
           SKILLS='${{ steps.changes.outputs.skills }}'
 
           echo "Processing $(echo $SKILLS | jq 'length') skill(s)..."
