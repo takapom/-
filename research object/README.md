@@ -23,4 +23,6 @@ Codex と Claude Code の比較は中心的貢献ではなく、ハーネス内�
 
 評価は、飛行性能の最高値ではなく、自然言語由来のミッション生成・変更を安全に処理できたかに置く。初期PoCでは、安全制約違反率、危険指示の誤受理率、変更処理成功率、意思決定遅延、状態整合率を主指標にする。
 
+LLMOps / LLM observability は主貢献ではなく、数値化フェーズのための観測・評価・再現性レイヤーとして扱う。Langfuse は trial 単位の trace、prompt version、Mission IR / patch、validator 結果、修復履歴の保存に使う候補とし、promptfoo は固定タスクセットに対する offline eval / regression / red teaming に使う候補とする。追加候補として Phoenix、OpenTelemetry / OpenLLMetry、MLflow、DVC、Inspect AI、MCAP / Rerun を検討してよいが、安全判定の最終責任は常に deterministic Validator / Runtime Monitor / SITL Gate に置く。
+
 実験設計では、提案方式をひとまとめに評価しない。Mission IR、Validator、State Store、Mission Patch、Repair Loop を段階的に足すアブレーションにし、どの構成要素が安全性・状態保持・実行中変更処理に効いたかを分離して示す。

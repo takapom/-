@@ -30,6 +30,27 @@
 
 最初から単一の総合点にしない。安全系の指標は、他の性能指標より優先されるハードゲートとして扱う。
 
+## 数値化フェーズと観測基盤
+
+LLMOps / LLM observability は、本研究の主貢献ではなく、AI 挙動を数値化し、改善サイクルを再現可能にするための測定基盤として扱う。
+
+このレイヤーで見る問いは、次のように限定する。
+
+> prompt、schema、validator、apply policy、repair loop の変更により、同じ固定タスクセット上で安全性、状態整合性、変更処理成功率、修復負荷がどの程度変わったか。
+
+初期候補:
+
+| 役割 | 候補 | 用途 |
+| --- | --- | --- |
+| Trace / prompt management | Langfuse | LLM 呼び出し、Mission IR / patch、validator 結果、修復履歴、latency、cost の保存 |
+| Offline eval / regression | promptfoo | 固定タスクセットでの prompt / schema 変更前後比較、危険指示・曖昧指示の回帰検出 |
+| OpenTelemetry系 trace | Phoenix, OpenTelemetry / OpenLLMetry | Langfuse 代替または将来の移行先。trace schema の標準化 |
+| Experiment artifact | MLflow, DVC | タスクセット、gold label、集計CSV、図表、実験条件の再現性管理 |
+| Academic eval harness | Inspect AI | promptfoo で状態遷移や scorer を表現しづらくなった場合の候補 |
+| Robotics telemetry | ArduPilot log, MCAP, Rerun | SITL / telemetry の時系列ログ保存と可視化 |
+
+このレイヤーは観測と評価のために使う。安全制約の最終判定は LLMOps ツールではなく、決定的 Validator、Runtime Monitor、SITL Gate が行う。
+
 ## 主指標
 
 ### 1. Safety Violation Rate
@@ -280,10 +301,27 @@ altitude_rmse_m
 
 ```yaml
 trial_id: trial_0001
+trace_id: trace_2026_0001
 condition: B4
+condition_id: B4
+task_id: online_safe_001
+taskset_version: taskset_v0.1
+gold_label_version: labels_v0.1
 command_category: online_safe_change
 natural_language_input: 高度を1.5m以下にして同じ経路を続けて
 mission_id: mission_023
+llm:
+  provider: openai
+  model: codex
+  model_version: pinned_for_eval
+  prompt_version: prompt_b4_v0.1
+  schema_version: mission_ir_v0.1
+  validator_version: validator_v0.1
+  apply_policy_version: apply_policy_v0.1
+observability:
+  trace_backend: langfuse
+  eval_runner: promptfoo
+  artifact_store: dvc_or_mlflow
 current_state:
   mode: guided
   position_local_m: [2.1, 1.4, -1.2]
@@ -304,6 +342,8 @@ execution:
   max_altitude_m: 1.48
   max_speed_mps: 0.62
   max_cross_track_error_m: 0.31
+  sitl_log_path: logs/sitl/trial_0001.bin
+  telemetry_log_path: logs/telemetry/trial_0001.mcap
 repair:
   repair_loops: 0
   human_intervention: false

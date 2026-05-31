@@ -41,6 +41,7 @@
 | 自然言語 | 初期実験では日本語のみ |
 | 主モデル | Codex |
 | 他モデル比較 | 将来の副次実験。主張の中心にしない |
+| LLMOps / observability | 主貢献ではなく、数値化フェーズの観測・評価・再現性レイヤーとして使う |
 | 実機検証 | 現段階では評価対象外。将来の限定確認に留める |
 | 生成対象 | Python コードではなく、型付き Mission IR / Mission IR patch を第一生成物にする |
 | 低レベル制御 | ArduPilot / Pixhawk に残す |
@@ -104,6 +105,8 @@
 | 実験 dashboard / artifact 管理 | `.codex/13-mlops/weights-and-biases/SKILL.md` | 比較実験を可視化したい場合 |
 | 図表作成 | `.codex/20-ml-paper-writing/academic-plotting/SKILL.md` | アーキテクチャ図、アブレーション図、失敗分類図 |
 
+LLMOps / observability ツールは安全判定層ではない。Langfuse は trial trace、prompt version、Mission IR / patch、validator result、repair history の保存候補、promptfoo は固定タスクセットの offline eval / regression / red teaming 候補として扱う。追加候補は Phoenix、OpenTelemetry / OpenLLMetry、MLflow、DVC、Inspect AI、MCAP / Rerun だが、導入目的は測定・再現性・回帰検出に限定する。
+
 研究成果物・論文化:
 
 | 目的 | Skill path |
@@ -159,6 +162,8 @@ MAVLink / ArduPilot / Pixhawk
   ↓
 Telemetry Logger
   ↓
+Observability / Evaluation Store
+  ↓
 Failure Analyzer and Repair Loop
 ```
 
@@ -188,6 +193,7 @@ Runtime Monitor / MAVLink Command Adapter
 - Emitter は固定変換器またはテンプレートに寄せる。毎回 LLM に全コードを書かせない。
 - SITL は実機前の必須ゲートである。ほぼ全反復は SITL で行う。
 - Runtime Monitor は違反時に `hold`、`loiter`、`land`、`RTL` などの決定的安全動作へ移す。
+- LLMOps / observability は trace、評価、artifact 管理に限定し、安全制約の最終判定に使わない。
 - 実機検証へ進める条件は、SITL 成功、静的検証通過、危険フラグなし、人間承認ありに限定する。
 
 ## Mission IR / Mission Patch
@@ -340,10 +346,25 @@ mission_area:
 
 ```yaml
 trial_id: trial_0001
+trace_id: trace_2026_0001
 condition: C6
+condition_id: C6
+task_id: online_safe_001
+taskset_version: taskset_v0.1
 command_category: online_safe_change
 natural_language_input: 高度を1.5m以下にして同じ経路を続けて
 mission_id: mission_023
+llm:
+  model: codex
+  model_version: pinned_for_eval
+  prompt_version: prompt_c6_v0.1
+  schema_version: mission_ir_v0.1
+  validator_version: validator_v0.1
+  apply_policy_version: apply_policy_v0.1
+observability:
+  trace_backend: langfuse
+  eval_runner: promptfoo
+  artifact_store: dvc_or_mlflow
 current_state:
   mode: guided
   position_local_m: [2.1, 1.4, -1.2]

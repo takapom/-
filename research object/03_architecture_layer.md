@@ -33,6 +33,8 @@ MAVLink / ArduPilot / Pixhawk
   ↓
 Telemetry Logger
   ↓
+Observability / Evaluation Store
+  ↓
 Failure Analyzer and Repair Loop
 ```
 
@@ -163,19 +165,53 @@ Validator が落とした候補は、実行せず Failure Analyzer へ送る。
 
 最低限保存するもの:
 
+- trace_id
+- trial_id
+- condition_id
+- task_id
+- prompt_version
+- schema_version
+- validator_version
+- apply_policy_version
 - natural_language_input
 - normalized_intent
 - mission_ir
+- mission_patch
 - validator_result
 - emitted_code_or_mission
 - sitl_result
 - telemetry_trace
 - failure_label
+- repair_iteration
 - repair_prompt
 - repaired_mission_ir
 - human_intervention
 
-### 10. Failure Analyzer and Repair Loop
+### 10. Observability / Evaluation Store
+
+LLMOps / LLM observability は、ハーネスの安全判定層ではなく、数値化フェーズの観測・評価・再現性レイヤーとして置く。
+
+責務:
+
+- LLM 呼び出し、prompt、structured output、validator 結果、修復履歴を trial 単位の trace として保存する
+- SITL / telemetry log と LLM trace を `trace_id` / `trial_id` で接続する
+- 固定タスクセット上で prompt、schema、validator、apply policy の変更前後を比較する
+- 論文用の集計表、失敗分類、回帰検出、再実行条件を保存する
+
+初期候補:
+
+| 役割 | 候補 |
+| --- | --- |
+| LLM trace / prompt version / evaluation record | Langfuse |
+| Offline eval / regression / red teaming | promptfoo |
+| OSS / OpenTelemetry寄りの trace 代替 | Phoenix, OpenTelemetry / OpenLLMetry |
+| 実験 artifact / dataset versioning | MLflow, DVC |
+| 学術寄り eval harness | Inspect AI |
+| SITL / telemetry 時系列ログ | ArduPilot log, MCAP, Rerun |
+
+これらは研究の測定基盤であり、提案方式そのものではない。安全制約の最終判定は Static Validator、Runtime Monitor、SITL Gate が担当する。
+
+### 11. Failure Analyzer and Repair Loop
 
 失敗を分類し、次の生成に戻す。
 
@@ -199,6 +235,7 @@ LLM に任せないこと:
 | Mission IR | 研究の中心。型付き、検証可能、ログ可能にする |
 | Validator | 決定的。LLM出力の安全性を外部から検査する |
 | SITL | 実機前ゲート。ほぼ全反復はここで行う |
+| Observability / Evaluation Store | 数値化と再現性のための記録基盤。安全判定は担当しない |
 | Pixhawk / ArduPilot | 低レベル制御、安全停止、フェイルセーフを担当 |
 | Raspberry Pi | 実機側の伴走計算機。MAVLink通信とログ収集を担当 |
 | Real Drone | 最終段階の限定検証。研究の中心実験はSITLで成立させる |

@@ -443,6 +443,46 @@ Codex実験時の設定は、単純にtemperatureを低くするだけでは決�
 
 このモードは、研究体験を良くするための開発・探索用であり、正式な性能比較には使わない。
 
+## LLMOps / 評価ツール運用
+
+LLMOps / LLM observability は、数値化フェーズの観測・評価・再現性レイヤーとして導入する。主貢献は Mission IR、Validator、State Store、Mission Patch、Apply Policy、Repair Loop のハーネス設計であり、ツール導入そのものではない。
+
+このレイヤーの目的:
+
+- LLM の非決定的な出力を `trace_id` / `trial_id` で追跡する
+- prompt、schema、validator、apply policy の変更前後を同じ固定タスクセットで比較する
+- 失敗分類、修復履歴、SITL結果、telemetry log を同一 trial に紐づける
+- C0/C2/C6/C7 の差分を、成功デモではなく数値として示す
+- Dry Run 後に prompt / schema / validator を凍結し、正式評価中の比較可能性を守る
+
+初期採用候補とトレードオフ:
+
+| ツール | 使いどころ | 強い点 | 注意点 |
+| --- | --- | --- | --- |
+| Langfuse | LLM trace、prompt version、eval record、latency/cost | trial 単位の生成・検証・修復過程を追いやすい | 研究用 scorer や SITL 状態遷移は外部実装が必要 |
+| promptfoo | 固定タスクセットの offline eval / regression / red teaming | YAML/CLI/CI で prompt 変更の回帰検出を回しやすい | 複雑な SITL 実行や状態保持 scorer は Python 側に逃がす |
+| Phoenix | Langfuse の代替または比較候補 | OSS / OpenTelemetry / OpenInference 寄りで研究ログと相性がよい | Langfuse と役割が重複するため初期から併用しすぎない |
+| OpenTelemetry / OpenLLMetry | trace schema の標準化 | 将来のツール移行や vendor lock-in 低減に効く | 直接の評価UIではないため、保存先や集計基盤が別途必要 |
+| MLflow | 実験 tracking、artifact、集計結果管理 | 論文用の実験条件、CSV、図表、モデル設定をまとめやすい | Langfuse と LLM trace 機能が一部重複する |
+| DVC | タスクセット、gold label、ログ、集計CSVの versioning | データと評価セットをGit的に固定できる | LLM trace UI は持たない |
+| Inspect AI | 学術寄りの eval harness | dataset / solver / scorer / log / sandbox を研究プロトコルとして書きやすい | promptfoo より導入が重い |
+| DeepEval | Python-native / pytest風の LLM eval | 単体テスト風に scorer を書きやすい | promptfoo と役割が重複し、LLM-as-judge 依存が増えやすい |
+| Ragas | RAG / agent / tool-use 評価 | 将来、長期記憶や検索付き状態参照を入れる場合に使える | 現PoCの Mission IR / safety validator 評価には過剰 |
+| Giskard | LLM testing / red teaming | 危険指示や曖昧指示のテスト生成に使える | promptfoo red teaming と重複する |
+| garak | LLM vulnerability scanning | jailbreak や unsafe behavior の探索に使える | UAV の物理安全制約評価とは距離がある |
+| Guardrails AI / NeMo Guardrails | 入出力 guard / topical guardrail | 一般的な形式違反や禁止トピック抑制に使える | UAV の決定的安全 Validator を置き換えない |
+| MCAP / Rerun | SITL / telemetry の時系列ログと可視化 | LLM trace と機体挙動を `trial_id` で突合しやすい | LLM eval ツールではない |
+| ArduPilot DataFlash log | SITL / ArduPilot 側の一次ログ | 飛行挙動の根拠データとして最も重要 | LLM trace とは別系統なので共通IDで紐づける必要がある |
+
+初期PoCでは、Langfuse と promptfoo を第一候補にする。追加で入れるなら、再現性管理として DVC または MLflow、telemetry 側として ArduPilot log / MCAP を優先する。Phoenix、Inspect AI、DeepEval、Ragas、Giskard、garak、Guardrails 系は、必要性が出た段階で個別に検討する。
+
+禁止事項:
+
+- LLMOps ツールを安全制約の最終判定器にしない
+- LLM-as-judge のスコアを Safety Violation Rate や Unsafe Acceptance Rate の代替にしない
+- ツール比較そのものを主研究にしない
+- Evaluation Mode の途中で prompt / schema / validator を変更しない
+
 ### 決定した運用
 
 Codex設定について、現時点では次の運用にする。

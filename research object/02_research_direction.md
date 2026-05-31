@@ -55,6 +55,17 @@ RQ4: シミュレーションで安全と判定されたミッションは、限
 4. LLM 由来のUAVミッション失敗分類
 5. SITLから限定実機検証へ進むための実行ゲート設計
 
+LLMOps / LLM observability は、この貢献の中心には置かない。役割は、非決定的な LLM 出力を trial 単位で記録し、prompt / schema / validator / apply policy の変更前後を同じタスクセットで比較し、失敗分類と改善量を再現可能にすることである。したがって、Langfuse や promptfoo などのツールは研究対象ではなく、評価プロトコルを支える測定基盤として扱う。
+
+数値化フェーズで最低限追跡するもの:
+
+- `trace_id`, `trial_id`, `condition_id`, `task_id`
+- `model_version`, `prompt_version`, `schema_version`, `validator_version`, `apply_policy_version`
+- Mission IR / Mission IR patch
+- validator result, SITL result, runtime monitor result
+- failure label, repair iteration, human intervention
+- latency, token usage, cost, output variance
+
 ## 比較条件
 
 比較対象はモデル名ではなく、ハーネス構成に置く。
