@@ -1,366 +1,367 @@
 ---
 name: creative-thinking-for-research
-description: Applies cognitive science frameworks for creative thinking to CS and AI research ideation. Use when seeking genuinely novel research directions by leveraging combinatorial creativity, analogical reasoning, constraint manipulation, and other empirically grounded creative strategies.
+description: "認知科学の創造的思考フレームワークを、CSおよびAI研究の発想に適用する。組合せ的創造性、類推推論、制約操作など、実証的に裏づけられた創造戦略を使って、本当に新しい研究方向を探すときに使う。"
 version: 1.0.0
 author: Orchestra Research
 license: MIT
-tags: [Creative Thinking, Research Ideation, Analogical Reasoning, Problem Reformulation, Cognitive Science]
+tags: [創造的思考, 研究発想, 類推推論, 問題の再定式化, 認知科学]
 dependencies: []
 ---
 
-# Creative Thinking for Research
+# 研究のための創造的思考
 
-Eight empirically grounded frameworks from cognitive science, applied to computer science and AI research. Unlike ad-hoc brainstorming, each framework here is backed by decades of creativity research — from Koestler's bisociation to Kauffman's adjacent possible. They target distinct cognitive operations: combining, reformulating, analogizing, constraining, inverting, abstracting, exploring boundaries, and holding contradictions.
+認知科学に基づく8つの実証的フレームワークを、コンピュータサイエンスとAI研究に適用する。場当たり的なブレインストーミングとは異なり、ここにある各フレームワークは、Koestler の bisociation から Kauffman の adjacent possible まで、数十年にわたる創造性研究に支えられている。狙う認知操作はそれぞれ異なる。組み合わせる、再定式化する、類推する、制約する、反転する、抽象化する、境界を探索する、矛盾を保持する。
 
-## When to Use This Skill
+## このスキルを使う場面
 
-- Generating genuinely novel ideas, not incremental extensions of prior work
-- Feeling trapped in a local optimum of thinking within a single subfield
-- Wanting to systematically apply creativity heuristics rather than waiting for inspiration
-- Preparing for a research retreat or PhD-level ideation session
-- Bridging between fields and seeking structural (not superficial) connections
+- 既存研究の漸進的拡張ではなく、本当に新しいアイデアを生成したいとき
+- 単一サブフィールド内の思考に閉じ込められ、局所最適から抜けたいとき
+- ひらめきを待つのではなく、創造性のヒューリスティックを体系的に使いたいとき
+- research retreat や博士課程レベルの ideation session に備えるとき
+- 分野間を橋渡しし、表面的ではなく構造的な接続を探すとき
 
-**Do NOT use this skill when**:
-- You need structured project-level brainstorming workflows (use `brainstorming-research-ideas`)
-- You have a well-defined problem and need execution help (use domain-specific skills)
-- You need a literature survey (use `scientific-skills:literature-review`)
+**このスキルを使わない場面**:
+- プロジェクト単位の構造化ブレインストーミングが必要なとき。`brainstorming-research-ideas` を使う
+- すでに明確な問題があり、実行支援が必要なとき。領域固有のスキルを使う
+- 文献調査が必要なとき。`scientific-skills:literature-review` を使う
 
-**Relationship to Brainstorm skill**: The brainstorm skill provides operational workflows (diverge → converge → refine) and practical filters. This skill provides the deeper cognitive engines that power creative leaps. Use them together: creative-thinking to generate raw insight, brainstorm to structure and evaluate it.
+**Brainstorm スキルとの関係**: brainstorm スキルは、発散 → 収束 → 洗練という運用ワークフローと実用的なフィルタを提供する。このスキルは、創造的飛躍を生むより深い認知エンジンを提供する。併用するとよい。creative-thinking で生の洞察を生成し、brainstorm で構造化して評価する。
 
 ---
 
-## Framework 1: Combinatorial Creativity (Bisociation)
+## フレームワーク1: 組合せ的創造性。Bisociation
 
-Novel ideas arise from combining existing concepts in unexpected ways. Arthur Koestler called this **bisociation** — connecting two previously unrelated frames of reference, as distinct from routine association within a single frame.
+新しいアイデアは、既存概念を予想外の形で組み合わせることから生まれる。Arthur Koestler はこれを **bisociation** と呼んだ。単一フレーム内の通常の連想ではなく、これまで無関係だった2つの参照枠を接続することである。
 
-**Why it works**: Meta-research consistently shows that breadth of knowledge is a precursor to creative output. People who read across disciplines produce more novel work. The combination itself is the creative act.
+**なぜ機能するか**: メタ研究は一貫して、知識の広さが創造的成果の前提であることを示している。分野横断的に読む人ほど、新規性の高い仕事を生みやすい。組み合わせそのものが創造的行為である。
 
-**In CS Research**:
-- Biological evolution → optimization (genetic algorithms)
-- Game theory → networking (mechanism design for routing)
-- Statistical physics → machine learning (Boltzmann machines, energy-based models)
-- Linguistics → programming (type theory, formal grammars)
+**CS研究での例**:
+- 生物進化 → 最適化。genetic algorithms
+- ゲーム理論 → ネットワーク。routing のための mechanism design
+- 統計物理 → 機械学習。Boltzmann machines、energy-based models
+- 言語学 → プログラミング。型理論、形式文法
 
-**Systematic Bisociation Workflow**:
+**体系的 Bisociation ワークフロー**:
 
-1. **Select two domains** you have at least passing familiarity with
-2. **List core primitives** in each domain (5-10 fundamental concepts per domain)
-3. **Create a cross-product matrix**: row = concepts from Domain A, column = concepts from Domain B
-4. **For each cell**, ask: "What would it mean to apply A's concept to B's problem?"
-5. **Filter**: Which combinations produce a non-trivial, testable research question?
-6. **Validate structural depth**: Is the connection mechanistic or merely metaphorical?
+1. 少なくとも軽く理解している2つのドメインを選ぶ
+2. 各ドメインの中核 primitive を列挙する。各ドメイン5から10個の基本概念
+3. cross-product matrix を作る。行はドメインAの概念、列はドメインBの概念
+4. 各セルについて問う。「Aの概念をBの問題に適用するとはどういうことか」
+5. フィルタする。どの組み合わせが非自明で検証可能な研究問いを生むか
+6. 構造的な深さを検証する。その接続はメカニズム的か、単なる比喩か
 
-**Cross-Product Example**:
+**Cross-Product の例**:
 
 | | Caching | Load Balancing | Fault Tolerance |
 |---|---------|---------------|-----------------|
-| **Natural Selection** | Evict least-fit entries | Adaptive allocation via fitness | Population-level redundancy |
-| **Immune Memory** | Learned threat signatures | Distributed detection | Self/non-self discrimination |
-| **Symbiosis** | Cooperative prefetching | Mutualistic resource sharing | Co-dependent resilience |
+| **自然選択** | 適応度の低い entry を追い出す | fitness による適応的割当 | 個体群レベルの冗長性 |
+| **免疫記憶** | 学習された脅威 signature | 分散検知 | 自己と非自己の識別 |
+| **共生** | 協調的 prefetching | 相利的な資源共有 | 相互依存的な回復性 |
 
-**Quality Test**: A strong bisociation is not a surface metaphor ("the network is like a brain") but a structural mapping where the mechanism transfers ("attention mechanisms implement a form of selective gating analogous to cognitive attention filtering").
+**品質テスト**: 強い bisociation は、「ネットワークは脳のようだ」という表面的比喩ではない。「attention mechanism は、認知的 attention filtering に類似した選択的 gating の一形態を実装している」のように、メカニズムが移転する構造写像である。
 
-**Self-Check**:
-- [ ] Is the connection structural (mechanisms map) or merely verbal (labels map)?
-- [ ] Does the combination generate testable predictions?
-- [ ] Would an expert in both fields find the connection non-obvious but sound?
-
----
-
-## Framework 2: Problem Reformulation (Representational Change)
-
-Gestalt psychologists identified that breakthroughs often come not from solving the problem as stated, but from **re-representing the problem itself**. Kaplan and Simon's work on insight shows that changing the problem space — the constraints, the abstraction level, the formalism — is often where creativity lives.
-
-**The Key Shift**: From "How do I solve this problem?" to "Am I even thinking about this problem correctly?"
-
-**Reformulation Strategies**:
-
-| Strategy | Example |
-|----------|---------|
-| **Change the objective** | "Make the algorithm faster" → "Eliminate the need for this computation" |
-| **Change the formalism** | Graph problem → linear algebra problem (spectral methods) |
-| **Change the granularity** | Per-token prediction → per-span prediction |
-| **Change the agent** | "How should the model learn?" → "How should the data teach?" (curriculum learning) |
-| **Change the timescale** | Real-time optimization → amortized inference |
-| **Invert the direction** | Forward simulation → inverse problem (learning from observations) |
-
-**Workflow**:
-
-1. State your current problem in one sentence
-2. Identify the **hidden assumptions** in that statement:
-   - What formalism are you using? (Could you use a different one?)
-   - What is the objective? (Is it the right objective?)
-   - What level of granularity? (Could you go coarser or finer?)
-   - Who is the agent? (Could you shift perspective?)
-3. For each assumption, **generate the alternative**: "What if [opposite assumption]?"
-4. For each alternative, ask: "Does this reformulation make the problem easier, harder, or different in a useful way?"
-5. A reformulation that makes a hard problem easy is often a publishable insight on its own
-
-**Classic CS Examples**:
-- **PageRank**: Reformulated "find important web pages" from content analysis to graph eigenvalue problem
-- **Dropout**: Reformulated "prevent overfitting" from regularization to approximate ensemble
-- **Attention**: Reformulated "handle long sequences" from remembering everything to selectively querying
+**セルフチェック**:
+- [ ] 接続は構造的か。メカニズムが写像されているか。単にラベルが似ているだけではないか
+- [ ] その組み合わせは検証可能な予測を生むか
+- [ ] 両分野の専門家が、その接続を非自明だが妥当だと考えるか
 
 ---
 
-## Framework 3: Analogical Reasoning (Structure-Mapping)
+## フレームワーク2: 問題の再定式化。Representational Change
 
-Dedre Gentner's **structure-mapping theory** and Kevin Dunbar's studies of real scientists show that analogy is the core engine of scientific creativity. The critical finding: surface-level analogies are common but weak; **structural or relational analogies** — where the deep causal/relational structure maps across domains — produce the most powerful insights.
+Gestalt 心理学者は、突破口が「与えられた問題を解く」ことではなく、**問題そのものを再表現する**ことから生まれる場合が多いと示した。Kaplan と Simon の洞察研究は、制約、抽象度、形式体系といった問題空間を変えることに創造性が宿ることを示している。
 
-**Dunbar's Finding**: In the most successful labs, analogies from distant domains drove the most important discoveries. Nearby analogies refined ideas; distant analogies generated them.
+**鍵となる転換**: 「この問題をどう解くか」から、「そもそもこの問題の捉え方は正しいのか」へ。
 
-**Levels of Analogical Depth**:
+**再定式化の戦略**:
 
-| Level | Description | Value | Example |
-|-------|-------------|-------|---------|
-| **Surface** | Things look similar | Low | "A neural network is like a brain" |
-| **Relational** | Relationships between entities match | Medium | "Attention allocation in models parallels resource allocation in economics" |
-| **Structural** | Deep causal mechanisms map | High | "Diffusion models reverse a thermodynamic process; the math of non-equilibrium stat-mech directly applies" |
+| 戦略 | 例 |
+|------|----|
+| **目的を変える** | 「アルゴリズムを速くする」→「この計算自体を不要にする」 |
+| **形式体系を変える** | graph 問題 → 線形代数問題。spectral methods |
+| **粒度を変える** | token 単位予測 → span 単位予測 |
+| **主体を変える** | 「モデルはどう学ぶべきか」→「データはどう教えるべきか」。curriculum learning |
+| **時間スケールを変える** | real-time optimization → amortized inference |
+| **方向を反転する** | forward simulation → inverse problem。観測から学ぶ |
 
-**Structure-Mapping Workflow**:
+**ワークフロー**:
 
-1. **Describe your problem** using only relational/causal language (strip domain-specific nouns)
-   - Bad: "We need to improve transformer attention efficiency"
-   - Good: "We have a system that must selectively aggregate information from a large set, where relevance is context-dependent and the cost scales quadratically with set size"
-2. **Search for structural matches**: What other systems selectively aggregate from large sets?
-   - Database query optimization, visual attention in neuroscience, information retrieval, resource allocation
-3. **Pick the most distant match** with genuine structural fidelity
-4. **Map the solution mechanism**: How does the source domain solve this?
-5. **Transfer and adapt**: What changes when you bring that mechanism into your domain?
-6. **Generate predictions**: The analogy should tell you something you didn't already know
+1. 現在の問題を一文で述べる
+2. その文に含まれる **隠れた前提** を特定する
+   - どの形式体系を使っているか。別のものを使えるか
+   - 目的関数は何か。それは正しい目的か
+   - 粒度はどのレベルか。もっと粗く、または細かくできるか
+   - 主体は誰か。視点を移せるか
+3. 各前提について **代替案** を生成する。「もし [反対の前提] ならどうなるか」
+4. 各代替案について問う。「この再定式化は問題をより簡単にするか、難しくするか、あるいは有用な別問題にするか」
+5. 難しい問題を簡単にする再定式化は、それ自体が出版可能な洞察になりやすい
 
-**Validation Checklist**:
-- [ ] Does the mapping preserve causal/relational structure (not just labels)?
-- [ ] Can I identify at least one prediction the analogy makes in my domain?
-- [ ] Would an expert in the source domain confirm the mechanism is correctly understood?
-- [ ] Is the analogy non-obvious to my target audience?
-
----
-
-## Framework 4: Constraint Manipulation (Boden's Framework)
-
-Margaret Boden's framework distinguishes three forms of creativity based on how they interact with constraints:
-
-| Type | Operation | CS Example |
-|------|-----------|------------|
-| **Exploratory** | Search within the existing conceptual space | Hyperparameter tuning, architecture search within a fixed paradigm |
-| **Combinational** | Combine elements from different spaces | Multi-task learning, neuro-symbolic methods |
-| **Transformational** | Change the rules of the space itself | Dropping the assumption that training requires labels (self-supervised learning) |
-
-**Transformational creativity is the rarest and highest-impact.** It happens when you change what is even considered a valid solution.
-
-**Constraint Analysis Workflow**:
-
-1. **List the constraints** of your current approach (5-10 constraints):
-   - Computational: "Must fit in GPU memory"
-   - Methodological: "Requires labeled data"
-   - Architectural: "Uses fixed-length context"
-   - Evaluative: "Measured by accuracy on benchmark X"
-2. **Classify each constraint**:
-   - **Hard**: Physically or logically necessary (cannot violate)
-   - **Soft**: Convention or historical accident (can question)
-   - **Hidden**: Not stated but implicitly assumed (most fertile for innovation)
-3. **For each soft/hidden constraint**, ask:
-   - What if we relaxed it? (streaming algorithms from relaxing "fits in memory")
-   - What if we tightened it? (efficiency research from tightening compute budgets)
-   - What if we replaced it with a different constraint entirely?
-4. **The most productive move** is often exposing and dropping a hidden constraint
-
-**Classic Examples of Constraint Transformation**:
-- "Data must fit in memory" → dropped → streaming algorithms, external memory
-- "Training requires human labels" → dropped → self-supervised learning
-- "Models must be deterministic" → dropped → variational methods, diffusion
-- "Inference must happen in one pass" → dropped → iterative refinement, chain-of-thought
+**CSの古典例**:
+- **PageRank**: 「重要なWebページを見つける」を、内容分析ではなく graph eigenvalue 問題へ再定式化した
+- **Dropout**: 「過学習を防ぐ」を、regularization ではなく近似 ensemble として再定式化した
+- **Attention**: 「長い系列を扱う」を、すべてを記憶することではなく選択的に問い合わせることへ再定式化した
 
 ---
 
-## Framework 5: Negation and Inversion
+## フレームワーク3: 類推推論。Structure-Mapping
 
-Take a core assumption in your field and negate it. This is formalized in De Bono's lateral thinking and the **TRIZ methodology** from engineering.
+Dedre Gentner の **structure-mapping theory** と Kevin Dunbar の実際の科学者研究は、類推が科学的創造性の中核エンジンであることを示している。重要な発見は、表層的な類推はよくあるが弱く、**構造的または関係的な類推**、つまり深い因果構造や関係構造がドメイン間で写像される類推こそが最も強力な洞察を生むという点である。
 
-**The Pattern**: "What if [widely held assumption] is wrong, unnecessary, or invertible?"
+**Dunbar の発見**: 最も成功した研究室では、遠いドメインからの類推が最も重要な発見を駆動していた。近い類推はアイデアを洗練し、遠い類推はアイデアを生成した。
 
-**Systematic Negation Workflow**:
+**類推の深さのレベル**:
 
-1. **List 5-10 core assumptions** in your subfield (the things "everyone knows")
-2. **Negate each one** and ask: What system would you build?
-3. **Evaluate each negation**:
-   - Incoherent → discard
-   - Already explored → check if conditions have changed (see brainstorm skill, Framework 5)
-   - Unexplored and coherent → potential research direction
+| レベル | 説明 | 価値 | 例 |
+|--------|------|------|----|
+| **表層** | 物が似て見える | 低 | 「ニューラルネットワークは脳のようだ」 |
+| **関係的** | 実体間の関係が対応する | 中 | 「モデルの attention allocation は、経済学の resource allocation と並行する」 |
+| **構造的** | 深い因果メカニズムが対応する | 高 | 「diffusion model は熱力学過程を反転する。非平衡統計力学の数学が直接適用できる」 |
 
-**Negation Hall of Fame in CS**:
+**Structure-Mapping ワークフロー**:
 
-| Assumption | Negation | Result |
-|-----------|----------|--------|
-| "We need strong consistency" | What if we don't? | Eventual consistency, CRDTs |
-| "We need exact answers" | What if approximate is fine? | Sketches, LSH, approximate nearest neighbors |
-| "Labels are necessary" | What if we learn without them? | Self-supervised learning, contrastive methods |
-| "More parameters = more compute" | What if we don't use all parameters? | Mixture of Experts, sparse models |
-| "Training and inference are separate" | What if the model keeps learning? | Online learning, test-time training |
-| "Errors must be prevented" | What if we embrace and correct them? | Speculative decoding, self-correction |
+1. **問題を説明する**。関係や因果だけの言葉を使い、ドメイン固有名詞を削る
+   - 悪い例: 「transformer attention の効率を改善したい」
+   - 良い例: 「大きな集合から文脈依存の関連性に基づいて情報を選択的に集約する必要があり、コストが集合サイズの二乗で増えるシステムがある」
+2. **構造的に一致するものを探す**。大きな集合から選択的に集約する別のシステムは何か
+   - database query optimization、神経科学の visual attention、information retrieval、resource allocation
+3. 本物の構造的忠実性を持つ、最も遠い一致を選ぶ
+4. **解決メカニズムを写像する**。参照元ドメインはこれをどう解くか
+5. **移転して適応する**。そのメカニズムを自分のドメインへ持ち込むと、何が変わるか
+6. **予測を生成する**。類推は、すでに知っていることではない何かを教えるべきである
 
-**TRIZ-Inspired Principles for CS**:
-
-| TRIZ Principle | CS Application |
-|---------------|----------------|
-| **Inversion** | Reverse the process (generative vs. discriminative) |
-| **Segmentation** | Break monolithic into modular (microservices, mixture of experts) |
-| **Merging** | Combine separate steps (end-to-end learning) |
-| **Universality** | One component serves multiple functions (multi-task models) |
-| **Nesting** | Place one system inside another (meta-learning) |
-| **Dynamization** | Make static things adaptive (dynamic architectures, adaptive computation) |
+**検証チェックリスト**:
+- [ ] 写像は因果構造や関係構造を保っているか。ラベルだけではないか
+- [ ] 類推が自分のドメインで少なくとも1つの予測を作るか
+- [ ] 参照元ドメインの専門家が、メカニズム理解が正しいと確認できるか
+- [ ] その類推は対象読者にとって非自明か
 
 ---
 
-## Framework 6: Abstraction and Generalization Laddering
+## フレームワーク4: 制約操作。Boden のフレームワーク
 
-Moving up and down the abstraction ladder is a fundamental creative act. Polya's heuristics formalize this: *"Can you solve a more general problem? A more specific one? An analogous one?"*
+Margaret Boden のフレームワークは、創造性を制約との関係に基づいて3種類に分ける。
 
-**Three Moves**:
+| 種類 | 操作 | CSの例 |
+|------|------|--------|
+| **探索的** | 既存の概念空間の中を探索する | hyperparameter tuning、固定パラダイム内の architecture search |
+| **組合せ的** | 異なる空間の要素を組み合わせる | multi-task learning、neuro-symbolic methods |
+| **変形的** | 空間そのもののルールを変える | training には label が必要という前提を捨てる。self-supervised learning |
 
-| Move | Question | Outcome |
-|------|----------|---------|
-| **Generalize** | "Is my solution a special case of something broader?" | Framework papers, unifying theories |
-| **Specialize** | "What happens when I add extreme constraints?" | Niche applications, surprising edge cases |
-| **Analogize** | "Where else does this abstract pattern appear?" | Cross-domain transfer (see Framework 3) |
+**変形的創造性は最も希少で、最もインパクトが大きい。** 有効な解とみなされるもの自体を変えるときに起こる。
 
-**Generalization Workflow**:
-1. State your specific result
-2. Replace each specific element with a variable: "ResNet works for ImageNet" → "Architecture X works for distribution Y"
-3. Ask: Under what conditions does this hold? What is the general principle?
-4. If the general principle is novel → that is the contribution
+**制約分析ワークフロー**:
 
-**Specialization Workflow**:
-1. Take a general method
-2. Add extreme constraints: tiny data, huge dimensionality, adversarial inputs, real-time requirements
-3. Ask: Does the method still work? If not, why not?
-4. The failure case often reveals the method's true assumptions
+1. 現在のアプローチの制約を列挙する。5から10個
+   - 計算的: 「GPU memory に収まる必要がある」
+   - 方法論的: 「label 付きデータが必要」
+   - アーキテクチャ的: 「固定長 context を使う」
+   - 評価的: 「benchmark X の accuracy で測る」
+2. 各制約を分類する
+   - **ハード**: 物理的または論理的に必要。破れない
+   - **ソフト**: 慣習または歴史的偶然。疑える
+   - **隠れた制約**: 明示されていないが暗黙に仮定されている。革新の土壌になりやすい
+3. 各ソフト制約または隠れた制約について問う
+   - 緩めたらどうなるか。例: 「memory に収まる」を緩めると streaming algorithm が生まれる
+   - 厳しくしたらどうなるか。例: 計算予算を厳しくすると効率研究になる
+   - まったく別の制約に置き換えたらどうなるか
+4. 最も生産的な動きは、隠れた制約を露出させ、それを捨てることである場合が多い
 
-**When to Generalize vs. Specialize**:
-- Generalize when you have results but no explanation
-- Specialize when you have theory but no grounding
-- Analogize when you are stuck in either direction
-
----
-
-## Framework 7: The Adjacent Possible (Kauffman / Johnson)
-
-Stuart Kauffman's concept, popularized by Steven Johnson: innovation happens at the boundary of what is currently reachable — the **adjacent possible**. New ideas become thinkable once their prerequisites exist. This explains why simultaneous independent discovery is so common — multiple people reach the same boundary.
-
-**Practical Implication**: Map what has recently become possible and explore the space those enablers open.
-
-**Adjacent Possible Mapping Workflow**:
-
-1. **List recent enablers** (last 1-3 years):
-   - New hardware capabilities (longer context, faster inference, new accelerators)
-   - New datasets or benchmarks
-   - New open-source tools or frameworks
-   - New theoretical results
-   - New regulatory or social conditions
-2. **For each enabler, ask**: "What was previously impossible or impractical that this now permits?"
-3. **Combine enablers**: The most powerful adjacent possibles arise from the intersection of multiple new enablers
-4. **Check for competition**: If many people can see the same adjacent possible, speed or a unique angle matters
-
-**Current Adjacent Possibles (2025-2026)**:
-
-| Enabler | Newly Possible |
-|---------|---------------|
-| 1M+ token context windows | Full-codebase reasoning, book-length analysis |
-| Inference cost drops (100x in 2 years) | Real-time agentic loops, always-on AI assistants |
-| Open-weight models at GPT-4 level | Reproducible research on frontier capabilities |
-| Multimodal models (vision + language + audio) | Unified perception-reasoning systems |
-| Synthetic data at scale | Training data for domains with no natural data |
-| Tool-using models | Research automation, self-improving systems |
-
-**Timing Signal**: If your idea requires technology that doesn't exist yet, it's beyond the adjacent possible — park it. If your idea could have been done 5 years ago, someone probably did — check the literature. The sweet spot is ideas that became feasible in the last 6-18 months.
+**制約変形の古典例**:
+- 「データは memory に収まる必要がある」→ 捨てる → streaming algorithms、external memory
+- 「training には人手 label が必要」→ 捨てる → self-supervised learning
+- 「model は deterministic でなければならない」→ 捨てる → variational methods、diffusion
+- 「inference は一回の pass で起きなければならない」→ 捨てる → iterative refinement、chain-of-thought
 
 ---
 
-## Framework 8: Janusian and Dialectical Thinking
+## フレームワーク5: 否定と反転
 
-Albert Rothenberg's studies of eminent creators found that **holding two contradictory ideas simultaneously** is a hallmark of creative thinking. Named after Janus, the two-faced Roman god, this mode of thinking doesn't resolve contradictions by choosing a side — it generates new frameworks that transcend the opposition.
+自分の分野の中核前提を1つ取り、それを否定する。これは De Bono の lateral thinking や、工学の **TRIZ methodology** で形式化されている。
 
-**In CS**: The most influential results often emerge from tensions previously thought irreconcilable.
+**パターン**: 「もし [広く信じられている前提] が間違っている、不要である、または反転可能だとしたら」
 
-| Contradiction | Resolution | Impact |
-|--------------|------------|--------|
-| Consistency AND Availability (distributed systems) | CAP theorem: formalized the trade-off, then Raft/CRDTs found practical middle grounds | Foundation of distributed systems theory |
-| Security AND Usability | Zero-knowledge proofs: prove knowledge without revealing it | Enabled private computation |
-| Expressiveness AND Tractability | Probabilistic programming: express complex models, automate inference | New programming paradigm |
-| Memorization AND Generalization | Grokking: models memorize first, then generalize with more training | New understanding of learning dynamics |
-| Compression AND Quality | Neural codecs that compress beyond information-theoretic limits via learned priors | Redefined compression research |
+**体系的否定ワークフロー**:
 
-**Dialectical Thinking Workflow**:
+1. サブフィールドの中核前提を5から10個列挙する。「誰もが知っている」こと
+2. それぞれを否定し、問う。どんなシステムを作るか
+3. 各否定を評価する
+   - incoherent → 捨てる
+   - すでに探索済み → 条件が変わったか確認する。brainstorm スキルのフレームワーク5を見る
+   - 未探索で coherent → 潜在的な研究方向
 
-1. **Identify a binary** in your field: A vs. B (two approaches, goals, or paradigms treated as opposites)
-2. **Resist choosing a side**. Instead ask:
-   - "What would a system look like that achieves both A and B?"
-   - "Under what conditions is the A-B trade-off not fundamental?"
-   - "Is the opposition an artifact of how we formalized the problem?"
-3. **Seek synthesis**: The resolution often requires a new abstraction that reframes the relationship
-4. **Test the synthesis**: Can you demonstrate empirically that both goals are achievable?
+**CSにおける否定の殿堂**:
 
-**Self-Check**:
-- [ ] Am I holding the contradiction genuinely (not prematurely resolving it)?
-- [ ] Is the synthesis a new idea, not just a compromise (splitting the difference)?
-- [ ] Does the resolution change how people think about the problem, not just the solution?
+| 前提 | 否定 | 結果 |
+|------|------|------|
+| 「強い一貫性が必要」 | なくてもよいなら | eventual consistency、CRDTs |
+| 「正確な答えが必要」 | 近似でよいなら | sketches、LSH、approximate nearest neighbors |
+| 「label が必要」 | label なしで学ぶなら | self-supervised learning、contrastive methods |
+| 「parameter が多いほど計算量も多い」 | すべての parameter を使わないなら | Mixture of Experts、sparse models |
+| 「training と inference は別」 | model が学び続けるなら | online learning、test-time training |
+| 「error は防がなければならない」 | error を受け入れ修正するなら | speculative decoding、self-correction |
 
----
+**CS向け TRIZ 原則**:
 
-## Combining Frameworks: A Creative Thinking Protocol
-
-These frameworks are most powerful in combination. Here is a systematic protocol for a deep creative thinking session:
-
-### Phase 1: Map the Space (15 min)
-1. **Constraint Manipulation** (F4): List all constraints of the current paradigm. Mark which are hard, soft, hidden.
-2. **Adjacent Possible** (F7): List recent enablers that change the feasibility landscape.
-
-### Phase 2: Generate Disruptions (30 min)
-3. **Negation** (F5): Negate 3 soft/hidden constraints. What systems emerge?
-4. **Bisociation** (F1): Pick a distant field and create a cross-product matrix with your domain.
-5. **Problem Reformulation** (F2): Restate your problem 3 different ways (change objective, formalism, agent).
-
-### Phase 3: Deepen Promising Leads (30 min)
-6. **Analogical Reasoning** (F3): For each promising idea, find a structural analogy and extract predictions.
-7. **Abstraction Laddering** (F6): Move each idea up (generalize) and down (specialize).
-8. **Janusian Thinking** (F8): Identify any tensions. Can you synthesize rather than choose?
-
-### Phase 4: Evaluate (15 min)
-Apply the two-sentence test (from the brainstorm skill):
-> "**[Domain] currently struggles with [problem] because [reason].** We [approach] by [mechanism], which works because [insight]."
-
-Any idea that survives all four phases and passes the two-sentence test is worth pursuing.
+| TRIZ 原則 | CSでの応用 |
+|-----------|------------|
+| **反転** | プロセスを逆にする。generative vs. discriminative |
+| **分割** | 一枚岩を modular にする。microservices、mixture of experts |
+| **統合** | 別々の step を組み合わせる。end-to-end learning |
+| **汎用性** | 1つの部品に複数機能を担わせる。multi-task models |
+| **入れ子** | ある system を別の system の中に置く。meta-learning |
+| **動的化** | 静的なものを適応的にする。dynamic architectures、adaptive computation |
 
 ---
 
-## Common Creative Blocks and Unblocking Strategies
+## フレームワーク6: 抽象化と一般化のはしご
 
-| Block | Symptom | Framework to Apply |
-|-------|---------|-------------------|
-| **Fixation** | Cannot stop thinking about the problem one way | Problem Reformulation (F2) — force a different representation |
-| **Tunnel vision** | All ideas come from the same subfield | Bisociation (F1) or Analogical Reasoning (F3) — import from elsewhere |
-| **Self-censoring** | Dismissing ideas as "too weird" before exploring | Negation (F5) — weird is the point; evaluate after generating |
-| **Incrementalism** | Every idea is "+2% on benchmark X" | Constraint Manipulation (F4) — change the rules, not the parameters |
-| **Analysis paralysis** | Too many options, cannot commit | Adjacent Possible (F7) — what is feasible right now? |
-| **False dichotomy** | Stuck choosing between two approaches | Janusian Thinking (F8) — seek synthesis, not selection |
+抽象化のはしごを上下することは、根本的な創造行為である。Polya のヒューリスティックはこれを形式化している。*「より一般的な問題を解けるか。より具体的な問題はどうか。類似の問題はどうか」*
+
+**3つの動き**:
+
+| 動き | 問い | 成果 |
+|------|------|------|
+| **一般化する** | 自分の解は、より広い何かの特殊例か | フレームワーク論文、統一理論 |
+| **特殊化する** | 極端な制約を加えると何が起きるか | niche applications、意外な edge cases |
+| **類推する** | この抽象パターンは他にどこに現れるか | 分野横断の転移。フレームワーク3参照 |
+
+**一般化ワークフロー**:
+1. 自分の具体的な結果を述べる
+2. 各具体要素を変数に置き換える。「ResNet は ImageNet で機能する」→「Architecture X は distribution Y で機能する」
+3. 問う。これはどの条件で成り立つか。一般原理は何か
+4. 一般原理が新しければ、それが貢献である
+
+**特殊化ワークフロー**:
+1. 一般的な方法を取る
+2. 極端な制約を加える。tiny data、huge dimensionality、adversarial inputs、real-time requirements など
+3. 問う。方法はまだ機能するか。機能しないなら、なぜか
+4. 失敗事例は、その方法の本当の前提を露出させることが多い
+
+**いつ一般化し、いつ特殊化するか**:
+- 結果はあるが説明がないときは一般化する
+- 理論はあるが grounding がないときは特殊化する
+- どちらでも詰まっているときは類推する
 
 ---
 
-## Usage Instructions for Agents
+## フレームワーク7: 隣接可能性。Kauffman / Johnson
 
-When a researcher asks for help with creative thinking or novel ideation:
+Stuart Kauffman の概念で、Steven Johnson により広められたもの。革新は現在到達可能なものの境界、つまり **adjacent possible** で起きる。前提条件が存在するようになって初めて、新しいアイデアは考えられるようになる。だから同時独立発見が頻繁に起こる。複数の人が同じ境界に到達するからである。
 
-1. **Assess the block**: What kind of thinking are they stuck in? (See Common Creative Blocks table)
-2. **Select 2-3 frameworks** based on the block type
-3. **Walk through each framework interactively**, asking the researcher to supply domain-specific content
-4. **Push for structural depth**: If an analogy or combination is surface-level, probe deeper
-5. **Maintain a running list** of all generated ideas, even unusual ones
-6. **Apply the two-sentence test** to candidates that survive exploration
-7. **Hand off to the brainstorm skill** for systematic evaluation (diverge → converge → refine)
+**実践上の含意**: 最近何が可能になったかを map し、その enabler が開いた空間を探索する。
 
-**Key Principles**:
-- Generative mode first, evaluative mode second — do not filter prematurely
-- Distant analogies are more valuable than nearby ones, but require more validation
-- The researcher's domain expertise is essential — the agent provides the cognitive scaffolding, not the domain knowledge
-- Encourage the researcher to sit with contradictions rather than resolve them quickly
+**Adjacent Possible Mapping ワークフロー**:
+
+1. **最近の enabler** を列挙する。直近1から3年
+   - 新しい hardware capabilities。長い context、高速 inference、新しい accelerator
+   - 新しい datasets や benchmarks
+   - 新しい open-source tools や frameworks
+   - 新しい理論結果
+   - 新しい規制または社会条件
+2. **各 enabler について問う**。「以前は不可能、または非実用的だった何を、これが可能にするか」
+3. **enabler を組み合わせる**。最も強い adjacent possible は、複数の新しい enabler の交差から生まれる
+4. **競争を確認する**。多くの人が同じ adjacent possible を見られるなら、速度または独自の角度が重要になる
+
+**現在の Adjacent Possibles。2025-2026**:
+
+| Enabler | 新たに可能になったこと |
+|---------|------------------------|
+| 100万 token 以上の context window | full-codebase reasoning、書籍長の分析 |
+| inference cost の低下。2年で100分の1 | real-time agentic loops、常時稼働 AI assistant |
+| GPT-4 レベルの open-weight model | frontier capability の再現可能研究 |
+| multimodal models。vision + language + audio | 統合された perception-reasoning system |
+| 大規模 synthetic data | 自然データがない領域の training data |
+| tool-using models | 研究自動化、自己改善 system |
+
+**タイミングのシグナル**: アイデアがまだ存在しない技術を必要とするなら、adjacent possible の外にある。いったん保留する。5年前にもできたアイデアなら、おそらく誰かがやっている。文献を確認する。sweet spot は、直近6から18か月で実行可能になったアイデアである。
+
+---
+
+## フレームワーク8: Janusian and Dialectical Thinking
+
+Albert Rothenberg による卓越した創作者の研究では、**2つの矛盾するアイデアを同時に保持すること** が創造的思考の特徴であるとされた。ローマ神話の双面神 Janus にちなんで名づけられたこの思考様式は、片方を選ぶことで矛盾を解決しない。対立を超える新しいフレームワークを生成する。
+
+**CSにおいて**: 最も影響力のある結果は、以前は両立不能と考えられていた緊張から生まれることが多い。
+
+| 矛盾 | 解決 | インパクト |
+|------|------|------------|
+| 一貫性 AND 可用性。distributed systems | CAP theorem が trade-off を形式化し、Raft/CRDTs が実用的中間地を見つけた | distributed systems theory の基礎 |
+| security AND usability | zero-knowledge proofs。知識を明かさずに知識を証明する | private computation を可能にした |
+| 表現力 AND tractability | probabilistic programming。複雑な model を表現し、inference を自動化する | 新しい programming paradigm |
+| 記憶 AND 一般化 | grokking。model はまず記憶し、さらに training すると一般化する | 学習 dynamics の新理解 |
+| 圧縮 AND 品質 | learned priors により情報理論的限界を超える neural codec | 圧縮研究を再定義 |
+
+**Dialectical Thinking ワークフロー**:
+
+1. 分野内の binary を特定する。A vs. B。相反すると扱われる2つのアプローチ、目標、パラダイム
+2. **片方を選ばない**。代わりに問う
+   - 「AとBの両方を達成する system はどのようなものか」
+   - 「A-B trade-off が本質的でない条件は何か」
+   - 「その対立は、問題の形式化の仕方が作った人工物ではないか」
+3. **統合を探す**。解決には、多くの場合、関係を再定式化する新しい抽象化が必要になる
+4. **統合を検証する**。両方の目標が達成可能であることを実証できるか
+
+**セルフチェック**:
+- [ ] 矛盾を本当に保持しているか。早すぎる解決をしていないか
+- [ ] 統合は新しいアイデアか。単なる妥協、つまり中間を取るだけではないか
+- [ ] その解決は、人々の問題の捉え方を変えるか。単に解法を変えるだけではないか
+
+---
+
+## フレームワークを組み合わせる。創造的思考プロトコル
+
+これらのフレームワークは組み合わせると最も強力になる。深い creative thinking session のための体系的プロトコルを示す。
+
+### フェーズ1: 空間を map する。15分
+1. **制約操作**。F4: 現在のパラダイムの制約をすべて列挙する。hard、soft、hidden を印づける
+2. **Adjacent Possible**。F7: 実現可能性の landscape を変える最近の enabler を列挙する
+
+### フェーズ2: 破壊的案を生成する。30分
+3. **否定**。F5: soft/hidden constraints を3つ否定する。どんな system が現れるか
+4. **Bisociation**。F1: 遠い分野を1つ選び、自分のドメインとの cross-product matrix を作る
+5. **問題の再定式化**。F2: 問題を3通りに言い換える。目的、形式体系、主体を変える
+
+### フェーズ3: 有望な手がかりを深める。30分
+6. **類推推論**。F3: 有望な各アイデアについて、構造的類推を見つけ、予測を取り出す
+7. **抽象化のはしご**。F6: 各アイデアを上へ動かし一般化し、下へ動かし特殊化する
+8. **Janusian Thinking**。F8: 緊張関係がないか特定する。選択ではなく統合できるか
+
+### フェーズ4: 評価する。15分
+
+brainstorm スキルの2文テストを適用する。
+> 「**[分野] は現在 [問題] に苦労している。なぜなら [理由] だからである。** 私たちは [メカニズム] によって [アプローチ] する。これが機能するのは [洞察] のためである。」
+
+4フェーズすべてを生き残り、2文テストを通過したアイデアは、追求する価値がある。
+
+---
+
+## よくある創造的ブロックと解除戦略
+
+| ブロック | 症状 | 適用するフレームワーク |
+|----------|------|------------------------|
+| **固着** | 1つの見方でしか問題を考えられない | 問題の再定式化。F2。別の表現を強制する |
+| **トンネル視野** | すべてのアイデアが同じサブフィールドから来る | Bisociation。F1、または類推推論。F3。外部から取り込む |
+| **自己検閲** | 探索前に「変すぎる」と捨てる | 否定。F5。変であることが狙い。評価は生成後に行う |
+| **漸進主義** | どのアイデアも「benchmark X で +2%」 | 制約操作。F4。parameter ではなく rule を変える |
+| **分析麻痺** | 選択肢が多すぎて決められない | Adjacent Possible。F7。今すぐ実行可能なものは何か |
+| **偽の二分法** | 2つの approach のどちらかを選ぶところで詰まる | Janusian Thinking。F8。選択ではなく統合を探す |
+
+---
+
+## エージェント向け使用指示
+
+研究者が creative thinking や新規発想の支援を求めた場合:
+
+1. **ブロックを評価する**: どの種類の思考で詰まっているか。よくある創造的ブロック表を見る
+2. **2から3個のフレームワークを選ぶ**: ブロックの種類に基づいて選択する
+3. **各フレームワークを対話的に進める**: 研究者にドメイン固有の内容を出してもらう
+4. **構造的な深さを求める**: 類推や組み合わせが表面的なら、より深く掘る
+5. **生成されたアイデアを継続的にリスト化する**: 奇妙なものも残す
+6. **探索を生き残った候補に2文テストを適用する**
+7. **体系的評価は brainstorm スキルへ渡す**: 発散 → 収束 → 洗練
+
+**重要原則**:
+- まず生成モード、その後に評価モード。早すぎるフィルタリングをしない
+- 遠い類推は近い類推より価値が大きいが、より多くの検証を必要とする
+- 研究者のドメイン専門性は不可欠である。エージェントは認知の足場を提供するのであって、ドメイン知識を代替しない
+- 研究者が矛盾を急いで解決せず、しばらく保持するよう促す

@@ -1,384 +1,384 @@
 ---
 name: brainstorming-research-ideas
-description: Guides researchers through structured ideation frameworks to discover high-impact research directions. Use when exploring new problem spaces, pivoting between projects, or seeking novel angles on existing work.
+description: "研究者が構造化された発想フレームワークを使って、インパクトの大きい研究方向を見つけるためのガイド。新しい問題空間を探索するとき、プロジェクト間で方向転換するとき、既存研究の新しい切り口を探すときに使う。"
 version: 1.0.0
 author: Orchestra Research
 license: MIT
-tags: [Research Ideation, Brainstorming, Problem Discovery, Creative Thinking, Research Strategy]
+tags: [研究発想, ブレインストーミング, 問題発見, 創造的思考, 研究戦略]
 dependencies: []
 ---
 
-# Research Idea Brainstorming
+# 研究アイデアのブレインストーミング
 
-Structured frameworks for discovering the next research idea. This skill provides ten complementary ideation lenses that help researchers move from vague curiosity to concrete, defensible research proposals. Each framework targets a different cognitive mode—use them individually or combine them for comprehensive exploration.
+次の研究アイデアを見つけるための構造化フレームワーク。このスキルは、曖昧な関心を具体的で説明可能な研究提案へ変えるための、10個の相補的な発想レンズを提供する。各フレームワークは異なる認知モードを狙っている。単独で使っても、組み合わせて包括的に探索してもよい。
 
-## When to Use This Skill
+## このスキルを使う場面
 
-- Starting a new research direction and need structured exploration
-- Feeling stuck on a current project and want fresh angles
-- Evaluating whether a half-formed idea has real potential
-- Preparing for a brainstorming session with collaborators
-- Transitioning between research areas and seeking high-leverage entry points
-- Reviewing a field and looking for underexplored gaps
+- 新しい研究方向を始めるため、構造化された探索が必要なとき
+- 現在のプロジェクトで詰まり、新しい切り口がほしいとき
+- まだ半分しか形になっていないアイデアに本当に可能性があるか評価したいとき
+- 共同研究者とのブレインストーミングに備えるとき
+- 研究領域を移る際に、レバレッジの高い入口を探しているとき
+- 分野を概観し、十分に探索されていないギャップを探すとき
 
-**Do NOT use this skill when**:
-- You already have a well-defined research question and need execution guidance
-- You need help with experimental design or methodology (use domain-specific skills)
-- You want a literature review (use `scientific-skills:literature-review`)
-
----
-
-## Core Ideation Frameworks
-
-### 1. Problem-First vs. Solution-First Thinking
-
-Research ideas originate from two distinct modes. Knowing which mode you are in prevents a common failure: building solutions that lack real problems, or chasing problems without feasible approaches.
-
-**Problem-First** (pain point → method):
-- Start with a concrete failure, bottleneck, or unmet need
-- Naturally yields impactful work because the motivation is intrinsic
-- Risk: may converge on incremental fixes rather than paradigm shifts
-
-**Solution-First** (new capability → application):
-- Start with a new tool, insight, or technique seeking application
-- Often drives breakthroughs by unlocking previously impossible approaches
-- Risk: "hammer looking for a nail"—solution may lack genuine demand
-
-**Workflow**:
-1. Write down your idea in one sentence
-2. Classify it: Is this problem-first or solution-first?
-3. If problem-first → verify the problem matters (who suffers? how much?)
-4. If solution-first → identify at least two genuine problems it addresses
-5. For either mode, articulate the gap: what cannot be done today that this enables?
-
-**Self-Check**:
-- [ ] Can I name a specific person or community who needs this?
-- [ ] Is the problem I am solving actually unsolved (not just under-marketed)?
-- [ ] If solution-first, does the solution create new capability or just replicate existing ones?
+**このスキルを使わない場面**:
+- すでに明確な研究問いがあり、実行のガイダンスが必要なとき
+- 実験設計や方法論の支援が必要なとき。領域固有のスキルを使う
+- 文献レビューが必要なとき。`scientific-skills:literature-review` を使う
 
 ---
 
-### 2. The Abstraction Ladder
+## 中核となる発想フレームワーク
 
-Every research problem sits at a particular level of abstraction. Deliberately moving up or down the ladder reveals ideas invisible at your current level.
+### 1. 問題起点と解決策起点の思考
 
-| Direction | Action | Outcome |
-|-----------|--------|---------|
-| **Move Up** (generalize) | Turn a specific result into a broader principle | Framework papers, theoretical contributions |
-| **Move Down** (instantiate) | Test a general paradigm under concrete constraints | Empirical papers, surprising failure analyses |
-| **Move Sideways** (analogize) | Apply same abstraction level to adjacent domain | Cross-pollination, transfer papers |
+研究アイデアは2つの異なるモードから生まれる。自分がどちらのモードにいるかを知ることで、実在する問題を欠いた解決策を作ってしまう失敗や、実現可能な方法のない問題を追いかける失敗を防げる。
 
-**Workflow**:
-1. State your current research focus in one sentence
-2. Move UP: What is the general principle behind this? What class of problems does this belong to?
-3. Move DOWN: What is the most specific, constrained instance of this? What happens at the extreme?
-4. Move SIDEWAYS: Where else does this pattern appear in a different field?
-5. For each new level, ask: Is this a publishable contribution on its own?
+**問題起点**。痛点から方法へ:
+- 具体的な失敗、ボトルネック、未充足ニーズから始める
+- 動機が内在的なので、自然にインパクトのある研究になりやすい
+- リスク: パラダイム転換ではなく、漸進的な修正に収束しやすい
 
-**Example**:
-- **Current**: "Improving retrieval accuracy for RAG systems"
-- **Up**: "What makes context selection effective for any augmented generation system?"
-- **Down**: "How does retrieval accuracy degrade when documents are adversarially perturbed?"
-- **Sideways**: "Database query optimization uses similar relevance ranking—what can we borrow?"
+**解決策起点**。新しい能力から応用へ:
+- 新しいツール、洞察、技術から始め、それを活かす応用を探す
+- これまで不可能だったアプローチを開くことで、ブレイクスルーにつながりやすい
+- リスク: 「釘を探すハンマー」になり、本当の需要を欠く可能性がある
 
----
+**ワークフロー**:
+1. アイデアを一文で書く
+2. 分類する。これは問題起点か、解決策起点か
+3. 問題起点なら、その問題が重要か検証する。誰がどの程度困っているか
+4. 解決策起点なら、それが解く本物の問題を少なくとも2つ挙げる
+5. どちらのモードでも、ギャップを明確にする。この研究によって、今できない何が可能になるのか
 
-### 3. Tension and Contradiction Hunting
-
-Breakthroughs often come from resolving tensions between widely accepted but seemingly conflicting goals. These contradictions are not bugs—they are the research opportunity.
-
-**Common Research Tensions**:
-
-| Tension Pair | Research Opportunity |
-|-------------|---------------------|
-| Performance ↔ Efficiency | Can we match SOTA with 10x less compute? |
-| Privacy ↔ Utility | Can federated/encrypted methods close the accuracy gap? |
-| Generality ↔ Specialization | When does fine-tuning beat prompting, and why? |
-| Safety ↔ Capability | Can alignment improve rather than tax capability? |
-| Interpretability ↔ Performance | Do mechanistic insights enable better architectures? |
-| Scale ↔ Accessibility | Can small models replicate emergent behaviors? |
-
-**Workflow**:
-1. Pick your research area
-2. List the top 3-5 desiderata (things everyone wants)
-3. Identify pairs that are commonly treated as trade-offs
-4. For each pair, ask: Is this trade-off fundamental or an artifact of current methods?
-5. If artifact → the reconciliation IS your research contribution
-6. If fundamental → characterizing the Pareto frontier is itself valuable
-
-**Self-Check**:
-- [ ] Have I confirmed this tension is real (not just assumed)?
-- [ ] Can I point to papers that optimize for each side independently?
-- [ ] Is my proposed reconciliation technically plausible, not just aspirational?
+**セルフチェック**:
+- [ ] これを必要としている具体的な人物やコミュニティを名指しできるか
+- [ ] 自分が解いている問題は本当に未解決か。単に十分に売り込まれていないだけではないか
+- [ ] 解決策起点の場合、その解決策は新しい能力を作っているか。既存能力の再実装に留まっていないか
 
 ---
 
-### 4. Cross-Pollination (Analogy Transfer)
+### 2. 抽象化のはしご
 
-Borrowing structural ideas from other disciplines is one of the most generative research heuristics. Many foundational techniques emerged this way—attention mechanisms draw from cognitive science, genetic algorithms from biology, adversarial training from game theory.
+すべての研究問題は、ある抽象度の上に位置している。意図的に抽象度を上げたり下げたりすると、現在のレベルでは見えないアイデアが現れる。
 
-**Requirements for a Valid Analogy**:
-- **Structural fidelity**: The mapping must hold at the level of underlying mechanisms, not just surface similarity
-- **Non-obvious connection**: If the link is well-known, the novelty is gone
-- **Testable predictions**: The analogy should generate concrete hypotheses
+| 方向 | 操作 | 成果 |
+|------|------|------|
+| **上に動く**。一般化 | 具体的な結果をより広い原理に変える | フレームワーク論文、理論的貢献 |
+| **下に動く**。具体化 | 一般的なパラダイムを具体的制約下で検証する | 実証論文、意外な失敗分析 |
+| **横に動く**。類推 | 同じ抽象レベルを隣接領域に適用する | 分野横断、転移の論文 |
 
-**High-Yield Source Fields for ML Research**:
+**ワークフロー**:
+1. 現在の研究対象を一文で述べる
+2. 上に動く。この背後にある一般原理は何か。これはどのクラスの問題に属するか
+3. 下に動く。最も具体的で制約の強い事例は何か。極端な条件では何が起きるか
+4. 横に動く。別分野では同じパターンがどこに現れるか
+5. 新しい各レベルについて問う。それ自体で出版可能な貢献になるか
 
-| Source Field | Transferable Concepts |
-|-------------|----------------------|
-| Neuroscience | Attention, memory consolidation, hierarchical processing |
-| Physics | Energy-based models, phase transitions, renormalization |
-| Economics | Mechanism design, auction theory, incentive alignment |
-| Ecology | Population dynamics, niche competition, co-evolution |
-| Linguistics | Compositionality, pragmatics, grammatical induction |
-| Control Theory | Feedback loops, stability, adaptive regulation |
-
-**Workflow**:
-1. Describe your problem in domain-agnostic language (strip the jargon)
-2. Ask: What other field solves a structurally similar problem?
-3. Study that field's solution at the mechanism level
-4. Map the solution back to your domain, preserving structural relationships
-5. Generate testable predictions from the analogy
-6. Validate: Does the borrowed idea actually improve outcomes?
+**例**:
+- **現在**: 「RAGシステムの検索精度を改善する」
+- **上**: 「任意の拡張生成システムにおいて、文脈選択を有効にする条件は何か」
+- **下**: 「文書が敵対的に摂動されたとき、検索精度はどのように劣化するか」
+- **横**: 「データベースのクエリ最適化は似た関連度ランキングを使う。何を借りられるか」
 
 ---
 
-### 5. The "What Changed?" Principle
+### 3. 緊張関係と矛盾を探す
 
-Strong ideas often come from revisiting old problems under new conditions. Advances in hardware, scale, data availability, or regulations can invalidate prior assumptions and make previously impractical approaches viable.
+ブレイクスルーは、広く受け入れられているが一見両立しない目標同士の緊張を解くことから生まれやすい。これらの矛盾はバグではなく、研究機会である。
 
-**Categories of Change to Monitor**:
+**よくある研究上の緊張関係**:
 
-| Change Type | Example | Research Implication |
-|------------|---------|---------------------|
-| **Compute** | GPUs 10x faster | Methods dismissed as too expensive become feasible |
-| **Scale** | Trillion-token datasets | Statistical arguments that failed at small scale may now hold |
-| **Regulation** | EU AI Act, GDPR | Creates demand for compliant alternatives |
-| **Tooling** | New frameworks, APIs | Reduces implementation barrier for complex methods |
-| **Failure** | High-profile system failures | Exposes gaps in existing approaches |
-| **Cultural** | New user behaviors | Shifts what problems matter most |
+| 緊張のペア | 研究機会 |
+|------------|----------|
+| 性能 ↔ 効率 | 10分の1の計算量でSOTAに並べるか |
+| プライバシー ↔ 有用性 | 連合学習や暗号化手法で精度ギャップを埋められるか |
+| 汎用性 ↔ 特化 | いつ、なぜ、fine-tuning は prompting に勝つのか |
+| 安全性 ↔ 能力 | alignment は能力の税ではなく、能力を改善できるか |
+| 解釈可能性 ↔ 性能 | メカニズムの洞察は、より良いアーキテクチャを可能にするか |
+| スケール ↔ アクセシビリティ | 小規模モデルは創発的挙動を再現できるか |
 
-**Workflow**:
-1. Pick a well-known negative result or abandoned approach (3-10 years old)
-2. List the assumptions that led to its rejection
-3. For each assumption, ask: Is this still true today?
-4. If any assumption has been invalidated → re-run the idea under new conditions
-5. Frame the contribution: "X was previously impractical because Y, but Z has changed"
+**ワークフロー**:
+1. 研究領域を1つ選ぶ
+2. その領域で誰もが望む上位3から5個の desiderata を列挙する
+3. トレードオフとして扱われがちなペアを特定する
+4. 各ペアについて問う。このトレードオフは本質的か、それとも現在の方法の産物か
+5. 産物なら、その和解こそが研究貢献になる
+6. 本質的なら、Pareto frontier を特徴づけること自体に価値がある
 
----
-
-### 6. Failure Analysis and Boundary Probing
-
-Understanding where a method breaks is often as valuable as showing where it works. Boundary probing systematically exposes the conditions under which accepted techniques fail.
-
-**Types of Boundaries to Probe**:
-- **Distributional**: What happens with out-of-distribution inputs?
-- **Scale**: Does the method degrade at 10x or 0.1x the typical scale?
-- **Adversarial**: Can the method be deliberately broken?
-- **Compositional**: Does performance hold when combining multiple capabilities?
-- **Temporal**: Does the method degrade over time (concept drift)?
-
-**Workflow**:
-1. Select a widely-used method with strong reported results
-2. Identify the implicit assumptions in its evaluation (dataset, scale, domain)
-3. Systematically violate each assumption
-4. Document where and how the method breaks
-5. Diagnose the root cause of each failure
-6. Propose a fix or explain why the failure is fundamental
-
-**Self-Check**:
-- [ ] Am I probing genuine boundaries, not just confirming known limitations?
-- [ ] Can I explain WHY the method fails, not just THAT it fails?
-- [ ] Does my analysis suggest a constructive path forward?
+**セルフチェック**:
+- [ ] この緊張が実在することを確認したか。単なる思い込みではないか
+- [ ] それぞれの側を独立に最適化する論文を挙げられるか
+- [ ] 提案する和解は技術的にもっともらしいか。願望だけではないか
 
 ---
 
-### 7. The Simplicity Test
+### 4. 異分野からの移植。類推の転用
 
-Before accepting complexity, ask whether a simpler approach suffices. Fields sometimes over-index on elaborate solutions when a streamlined baseline performs competitively.
+他分野から構造的なアイデアを借りることは、最も生成的な研究ヒューリスティックの1つである。多くの基礎技術がこのように生まれた。attention mechanism は認知科学から、genetic algorithm は生物学から、adversarial training はゲーム理論から影響を受けている。
 
-**Warning Signs of Unnecessary Complexity**:
-- The method has many hyperparameters with narrow optimal ranges
-- Ablations show most components contribute marginally
-- A simple baseline was never properly tuned or evaluated
-- The improvement over baselines is within noise on most benchmarks
+**有効な類推の条件**:
+- **構造的忠実性**: 写像は表面的な類似ではなく、基礎メカニズムのレベルで成立している必要がある
+- **非自明な接続**: つながりがよく知られているなら、新規性は失われている
+- **検証可能な予測**: 類推は具体的な仮説を生むべきである
 
-**Workflow**:
-1. Identify the current SOTA method for your problem
-2. Strip it to its simplest possible core (what is the one key idea?)
-3. Build that minimal version with careful engineering
-4. Compare fairly: same compute budget, same tuning effort
-5. If the gap is small → the contribution is the simplicity itself
-6. If the gap is large → you now understand what the complexity buys
+**ML研究にとって収穫の大きい参照分野**:
 
-**Contribution Framing**:
-- "We show that [simple method] with [one modification] matches [complex SOTA]"
-- "We identify [specific component] as the critical driver, not [other components]"
+| 参照分野 | 移植可能な概念 |
+|----------|----------------|
+| 神経科学 | attention、記憶固定、階層的処理 |
+| 物理学 | energy-based model、相転移、くりこみ |
+| 経済学 | メカニズムデザイン、オークション理論、インセンティブ整合 |
+| 生態学 | 個体群動態、ニッチ競争、共進化 |
+| 言語学 | 構成性、語用論、文法帰納 |
+| 制御理論 | フィードバックループ、安定性、適応制御 |
 
----
-
-### 8. Stakeholder Rotation
-
-Viewing a system from multiple perspectives reveals distinct classes of research questions. Each stakeholder sees different friction, risk, and opportunity.
-
-**Stakeholder Perspectives**:
-
-| Stakeholder | Key Questions |
-|-------------|---------------|
-| **End User** | Is this usable? What errors are unacceptable? What is the latency tolerance? |
-| **Developer** | Is this debuggable? What is the maintenance burden? How does it compose? |
-| **Theorist** | Why does this work? What are the formal guarantees? Where are the gaps? |
-| **Adversary** | How can this be exploited? What are the attack surfaces? |
-| **Ethicist** | Who is harmed? What biases are embedded? Who is excluded? |
-| **Regulator** | Is this auditable? Can decisions be explained? Is there accountability? |
-| **Operator** | What is the cost? How does it scale? What is the failure mode? |
-
-**Workflow**:
-1. Describe your system or method in one paragraph
-2. Assume each stakeholder perspective in turn (spend 5 minutes per role)
-3. For each perspective, list the top 3 concerns or questions
-4. Identify which concerns are unaddressed by existing work
-5. The unaddressed concern with the broadest impact is your research question
+**ワークフロー**:
+1. 問題をドメイン非依存の言葉で説明する。専門用語を削る
+2. 問う。構造的に似た問題を解いている別分野は何か
+3. その分野の解決策をメカニズムレベルで学ぶ
+4. 構造的関係を保ったまま、その解決策を自分の領域に写像する
+5. 類推から検証可能な予測を作る
+6. 検証する。借りたアイデアは実際に結果を改善するか
 
 ---
 
-### 9. Composition and Decomposition
+### 5. 「何が変わったのか」の原則
 
-Novelty often emerges from recombination or modularization. Innovation frequently lies not in new primitives, but in how components are arranged or separated.
+強いアイデアは、新しい条件のもとで古い問題を再訪することから生まれやすい。ハードウェア、スケール、データ可用性、規制の進展は、過去の前提を無効化し、以前は非現実的だったアプローチを実行可能にする。
 
-**Composition** (combining existing techniques):
-- Identify two methods that solve complementary subproblems
-- Ask: What emergent capability arises from combining them?
-- Example: RAG + Chain-of-Thought → retrieval-augmented reasoning
+**監視すべき変化の種類**:
 
-**Decomposition** (breaking apart monolithic systems):
-- Identify a complex system with entangled components
-- Ask: Which component is the actual bottleneck?
-- Example: Decomposing "fine-tuning" into data selection, optimization, and regularization reveals that data selection often matters most
+| 変化の種類 | 例 | 研究上の含意 |
+|------------|----|--------------|
+| **計算資源** | GPUが10倍速い | 高価すぎるとして退けられた方法が実行可能になる |
+| **スケール** | 兆 token データセット | 小規模では成立しなかった統計的主張が成立する可能性 |
+| **規制** | EU AI Act、GDPR | 準拠した代替手法への需要が生まれる |
+| **ツール** | 新しいフレームワークやAPI | 複雑な方法の実装障壁が下がる |
+| **失敗** | 注目度の高いシステム障害 | 既存アプローチのギャップが露出する |
+| **文化** | 新しいユーザー行動 | 重要な問題の重心が変わる |
 
-**Workflow**:
-1. List the 5-10 key components or techniques in your area
-2. **Compose**: Pick pairs and ask what happens when you combine them
-3. **Decompose**: Pick a complex method and isolate each component's contribution
-4. For compositions: Does the combination create emergent capabilities?
-5. For decompositions: Does isolation reveal a dominant or redundant component?
-
----
-
-### 10. The "Explain It to Someone" Test
-
-A strong research idea should be defensible in two sentences to a smart non-expert. This test enforces clarity of purpose and sharpens the value proposition.
-
-**The Two-Sentence Template**:
-> **Sentence 1** (Problem): "[Domain] currently struggles with [specific problem], which matters because [concrete consequence]."
-> **Sentence 2** (Insight): "We [approach] by [key mechanism], which works because [reason]."
-
-**If You Cannot Fill This Template**:
-- The problem may not be well-defined yet → return to Framework 1
-- The insight may not be clear yet → return to Framework 7 (simplify)
-- The significance may not be established → return to Framework 3 (find the tension)
-
-**Calibration Questions**:
-- Would a smart colleague outside your subfield understand why this matters?
-- Does the explanation stand without jargon?
-- Can you predict what a skeptic's first objection would be?
+**ワークフロー**:
+1. よく知られた否定的結果、または放棄されたアプローチを選ぶ。3年から10年前のものがよい
+2. それが退けられた前提を列挙する
+3. 各前提について問う。これは今でも真か
+4. どれかの前提が無効化されているなら、新しい条件でアイデアを再実行する
+5. 貢献をこう位置づける。「Xは以前Yのため非現実的だったが、Zが変わった」
 
 ---
 
-## Integrated Brainstorming Workflow
+### 6. 失敗分析と境界探索
 
-Use this end-to-end workflow to go from blank page to ranked research ideas.
+方法がどこで壊れるかを理解することは、どこで機能するかを示すことと同じくらい価値がある。境界探索は、受け入れられている技術が失敗する条件を体系的に露出させる。
 
-### Phase 1: Diverge (Generate Candidates)
+**探索すべき境界の種類**:
+- **分布**: 分布外入力では何が起きるか
+- **スケール**: 典型スケールの10倍または0.1倍で方法は劣化するか
+- **敵対性**: 意図的に壊せるか
+- **構成性**: 複数能力を組み合わせても性能は維持されるか
+- **時間**: 時間とともに劣化するか。concept drift は起きるか
 
-**Goal**: Produce 10-20 candidate ideas without filtering.
+**ワークフロー**:
+1. 強い結果が報告されている広く使われた方法を選ぶ
+2. その評価に含まれる暗黙の前提を特定する。データセット、スケール、ドメインなど
+3. 各前提を体系的に破る
+4. 方法がどこで、どのように壊れるかを記録する
+5. 各失敗の根本原因を診断する
+6. 修正案を提案するか、その失敗が本質的である理由を説明する
 
-1. **Scan for tensions** (Framework 3): List 5 trade-offs in your field
-2. **Check what changed** (Framework 5): List 3 recent shifts (compute, data, regulation)
-3. **Probe boundaries** (Framework 6): Pick 2 popular methods and find where they break
-4. **Cross-pollinate** (Framework 4): Pick 1 idea from an adjacent field
-5. **Compose/decompose** (Framework 9): Combine 2 existing techniques or split 1 apart
-6. **Climb the abstraction ladder** (Framework 2): For each candidate, generate up/down/sideways variants
-
-### Phase 2: Converge (Filter and Rank)
-
-**Goal**: Narrow to 3-5 strongest ideas.
-
-Apply these filters to each candidate:
-
-| Filter | Question | Kill Criterion |
-|--------|----------|----------------|
-| **Explain-It Test** (F10) | Can I state this in two sentences? | If no → idea is not yet clear |
-| **Problem-First Check** (F1) | Is the problem genuine and important? | If no one suffers from this → drop it |
-| **Simplicity Test** (F7) | Is the complexity justified? | If a simpler approach works → simplify or drop |
-| **Stakeholder Check** (F8) | Who benefits? Who might object? | If no clear beneficiary → drop it |
-| **Feasibility** | Can I execute this with available resources? | If clearly infeasible → park it for later |
-
-### Phase 3: Refine (Sharpen the Winner)
-
-**Goal**: Turn the top idea into a concrete research plan.
-
-1. Write the two-sentence pitch (Framework 10)
-2. Identify the core tension being resolved (Framework 3)
-3. Specify the abstraction level (Framework 2)
-4. List 3 concrete experiments that would validate the idea
-5. Anticipate the strongest objection and prepare a response
-6. Define a 2-week pilot that would provide signal on feasibility
-
-**Completion Checklist**:
-- [ ] Two-sentence pitch is clear and compelling
-- [ ] Problem is genuine (problem-first check passed)
-- [ ] Approach is justified (simplicity test passed)
-- [ ] At least one stakeholder clearly benefits
-- [ ] Core experiments are specified
-- [ ] Feasibility pilot is defined
-- [ ] Strongest objection has a response
+**セルフチェック**:
+- [ ] 本物の境界を探索しているか。既知の限界を確認しているだけではないか
+- [ ] その方法が失敗することだけでなく、なぜ失敗するかを説明できるか
+- [ ] 分析は建設的な次の道筋を示しているか
 
 ---
 
-## Framework Selection Guide
+### 7. 単純性テスト
 
-Not sure which framework to start with? Use this decision guide:
+複雑さを受け入れる前に、より単純なアプローチで十分ではないかを問う。分野によっては、簡潔な baseline が競争力を持つにもかかわらず、過度に精巧な解決策に偏ることがある。
 
-| Your Situation | Start With |
-|---------------|------------|
-| "I don't know what area to work in" | Tension Hunting (F3) → What Changed (F5) |
-| "I have a vague area but no specific idea" | Abstraction Ladder (F2) → Failure Analysis (F6) |
-| "I have an idea but I'm not sure it's good" | Explain-It Test (F10) → Simplicity Test (F7) |
-| "I have a good idea but need a fresh angle" | Cross-Pollination (F4) → Stakeholder Rotation (F8) |
-| "I want to combine existing work into something new" | Composition/Decomposition (F9) |
-| "I found a cool technique and want to apply it" | Problem-First Check (F1) → Stakeholder Rotation (F8) |
-| "I want to challenge conventional wisdom" | Failure Analysis (F6) → Simplicity Test (F7) |
+**不要な複雑さの警告サイン**:
+- narrow な最適範囲を持つハイパーパラメータが多い
+- ablation で多くの部品の寄与が小さい
+- 単純な baseline が適切に tuning も評価もされていない
+- benchmark の大半で baseline に対する改善がノイズ範囲内
 
----
+**ワークフロー**:
+1. 対象問題の現在のSOTA手法を特定する
+2. それを可能な限り単純な核へ削る。1つの鍵となるアイデアは何か
+3. その最小版を丁寧に実装する
+4. 公平に比較する。同じ計算予算、同じ tuning 労力
+5. 差が小さいなら、単純さ自体が貢献である
+6. 差が大きいなら、その複雑さが何を買っているかを理解できたことになる
 
-## Common Pitfalls in Research Ideation
-
-| Pitfall | Symptom | Fix |
-|---------|---------|-----|
-| **Novelty without impact** | "No one has done X" but no one needs X | Apply Problem-First Check (F1) |
-| **Incremental by default** | Idea is +2% on a benchmark | Climb the Abstraction Ladder (F2) |
-| **Complexity worship** | Method has 8 components, each helping marginally | Apply Simplicity Test (F7) |
-| **Echo chamber** | All ideas come from reading the same 10 papers | Use Cross-Pollination (F4) |
-| **Stale assumptions** | "This was tried and didn't work" (5 years ago) | Apply What Changed (F5) |
-| **Single-perspective bias** | Only considering the ML engineer's view | Use Stakeholder Rotation (F8) |
-| **Premature convergence** | Committed to first idea without exploring alternatives | Run full Diverge phase |
+**貢献の位置づけ**:
+- 「[単純な方法] に [1つの変更] を加えるだけで [複雑なSOTA] に並ぶことを示す」
+- 「重要な駆動要因は [特定の部品] であり、[他の部品] ではないことを特定する」
 
 ---
 
-## Usage Instructions for Agents
+### 8. ステークホルダーの回転
 
-When a researcher asks for help brainstorming research ideas:
+システムを複数の視点から見ると、異なる種類の研究問いが見えてくる。各ステークホルダーは、異なる摩擦、リスク、機会を見ている。
 
-1. **Identify their starting point**: Are they exploring a new area, stuck on a current project, or evaluating an existing idea?
-2. **Select appropriate frameworks**: Use the Framework Selection Guide to pick 2-3 relevant lenses
-3. **Walk through frameworks interactively**: Apply each framework step-by-step, asking the researcher for domain-specific inputs
-4. **Generate candidates**: Aim for 10-20 raw ideas across frameworks
-5. **Filter and rank**: Apply the Converge phase filters to narrow to top 3-5
-6. **Refine the winner**: Help articulate the two-sentence pitch and define concrete next steps
+**ステークホルダーの視点**:
 
-**Key Principles**:
-- Push for specificity—vague ideas ("improve efficiency") are not actionable
-- Challenge assumptions—ask "why?" at least three times
-- Maintain a written list of all candidates, even rejected ones (they may recombine later)
-- The researcher makes the final call on which ideas to pursue; the agent facilitates structured thinking
+| ステークホルダー | 主要な問い |
+|------------------|------------|
+| **エンドユーザー** | 使いやすいか。許容できないエラーは何か。遅延許容度はどの程度か |
+| **開発者** | debug しやすいか。保守負荷はどの程度か。他のものとどう合成されるか |
+| **理論家** | なぜ機能するのか。形式的保証は何か。ギャップはどこか |
+| **攻撃者** | どう悪用できるか。攻撃面はどこか |
+| **倫理学者** | 誰が害を受けるか。どんな bias が埋め込まれているか。誰が排除されるか |
+| **規制当局** | 監査可能か。意思決定を説明できるか。責任所在はあるか |
+| **運用者** | コストは何か。どうスケールするか。失敗モードは何か |
+
+**ワークフロー**:
+1. 自分のシステムまたは方法を1段落で説明する
+2. 各ステークホルダーの視点を順番に仮定する。各役割に5分ずつ使う
+3. 各視点について、上位3つの懸念や問いを列挙する
+4. 既存研究で未対応の懸念を特定する
+5. 最も広いインパクトを持つ未対応の懸念が、研究問いになる
+
+---
+
+### 9. 合成と分解
+
+新規性は、再結合やモジュール化から生まれることが多い。革新は新しい primitive そのものではなく、部品の配置や分離の仕方に宿ることが多い。
+
+**合成**。既存技術を組み合わせる:
+- 相補的な部分問題を解く2つの方法を特定する
+- 問う。それらを組み合わせると、どのような創発的能力が生まれるか
+- 例: RAG + Chain-of-Thought → 検索拡張推論
+
+**分解**。一枚岩のシステムを分ける:
+- entangled な部品を持つ複雑なシステムを特定する
+- 問う。どの部品が本当のボトルネックか
+- 例: 「fine-tuning」をデータ選択、最適化、正則化に分解すると、データ選択が最も重要な場合が多いと分かる
+
+**ワークフロー**:
+1. 領域内の主要な部品や技術を5から10個列挙する
+2. **合成**: ペアを選び、組み合わせると何が起きるかを問う
+3. **分解**: 複雑な方法を選び、各部品の寄与を分離する
+4. 合成について問う。その組み合わせは創発的能力を作るか
+5. 分解について問う。分離によって支配的な部品や冗長な部品が見えるか
+
+---
+
+### 10. 「誰かに説明する」テスト
+
+強い研究アイデアは、賢い非専門家に対して2文で弁護できるはずである。このテストは目的の明確さを強制し、価値提案を鋭くする。
+
+**2文テンプレート**:
+> **文1**。問題: 「[分野] は現在 [具体的な問題] に苦労しており、それが重要なのは [具体的な帰結] のためである。」
+> **文2**。洞察: 「私たちは [アプローチ] を [鍵となるメカニズム] によって行う。これが機能するのは [理由] のためである。」
+
+**このテンプレートを埋められない場合**:
+- 問題がまだ十分に定義されていない可能性がある → フレームワーク1へ戻る
+- 洞察がまだ明確でない可能性がある → フレームワーク7へ戻って単純化する
+- 重要性が確立されていない可能性がある → フレームワーク3へ戻って緊張関係を探す
+
+**キャリブレーション用の問い**:
+- 自分のサブフィールド外の賢い同僚が、なぜ重要かを理解できるか
+- 説明は専門用語なしで成立するか
+- 懐疑的な相手が最初に出す反論を予測できるか
+
+---
+
+## 統合ブレインストーミング・ワークフロー
+
+白紙から研究アイデアのランキングまで進むための end-to-end ワークフロー。
+
+### フェーズ1: 発散。候補を生成する
+
+**目標**: フィルタリングせずに10から20個の候補アイデアを作る。
+
+1. **緊張関係を探す**。フレームワーク3: 分野内のトレードオフを5つ列挙する
+2. **何が変わったか確認する**。フレームワーク5: 最近の変化を3つ列挙する。計算資源、データ、規制など
+3. **境界を探る**。フレームワーク6: 人気の方法を2つ選び、どこで壊れるかを探す
+4. **異分野から移植する**。フレームワーク4: 隣接分野からアイデアを1つ選ぶ
+5. **合成または分解する**。フレームワーク9: 既存技術を2つ組み合わせるか、1つを分解する
+6. **抽象化のはしごを登る**。フレームワーク2: 各候補について、上、下、横のバリエーションを作る
+
+### フェーズ2: 収束。絞り込みと順位付け
+
+**目標**: 最も強いアイデアを3から5個に絞る。
+
+各候補に次のフィルタを適用する。
+
+| フィルタ | 問い | 棄却基準 |
+|----------|------|----------|
+| **説明テスト**。F10 | これを2文で言えるか | できないなら、まだ明確でない |
+| **問題起点チェック**。F1 | 問題は本物で重要か | 誰も困っていないなら落とす |
+| **単純性テスト**。F7 | 複雑さは正当化されるか | より単純な方法で済むなら、単純化するか落とす |
+| **ステークホルダーチェック**。F8 | 誰が得をするか。誰が反対しそうか | 明確な受益者がいないなら落とす |
+| **実現可能性** | 手元の資源で実行できるか | 明らかに実現不能なら後回しにする |
+
+### フェーズ3: 洗練。勝ち筋を鋭くする
+
+**目標**: 最上位のアイデアを具体的な研究計画に変える。
+
+1. 2文ピッチを書く。フレームワーク10
+2. 解こうとしている中核的な緊張関係を特定する。フレームワーク3
+3. 抽象度のレベルを指定する。フレームワーク2
+4. アイデアを検証する具体的実験を3つ列挙する
+5. 最も強い反論を予想し、回答を用意する
+6. 実現可能性のシグナルを得る2週間の pilot を定義する
+
+**完了チェックリスト**:
+- [ ] 2文ピッチが明確で説得力を持つ
+- [ ] 問題が本物である。問題起点チェックを通過した
+- [ ] アプローチが正当化されている。単純性テストを通過した
+- [ ] 少なくとも1つのステークホルダーが明確に利益を得る
+- [ ] 中核実験が指定されている
+- [ ] 実現可能性 pilot が定義されている
+- [ ] 最も強い反論への回答がある
+
+---
+
+## フレームワーク選択ガイド
+
+どのフレームワークから始めるべきか分からない場合は、この判断ガイドを使う。
+
+| 状況 | 最初に使うもの |
+|------|----------------|
+| 「どの領域に取り組むべきか分からない」 | 緊張関係探し。F3 → 何が変わったか。F5 |
+| 「曖昧な領域はあるが、具体的なアイデアがない」 | 抽象化のはしご。F2 → 失敗分析。F6 |
+| 「アイデアはあるが、良いか分からない」 | 説明テスト。F10 → 単純性テスト。F7 |
+| 「良いアイデアはあるが、新しい切り口が必要」 | 異分野からの移植。F4 → ステークホルダーの回転。F8 |
+| 「既存研究を組み合わせて新しいものを作りたい」 | 合成と分解。F9 |
+| 「面白い技術を見つけ、応用したい」 | 問題起点チェック。F1 → ステークホルダーの回転。F8 |
+| 「通説に挑戦したい」 | 失敗分析。F6 → 単純性テスト。F7 |
+
+---
+
+## 研究発想でよくある落とし穴
+
+| 落とし穴 | 症状 | 修正 |
+|----------|------|------|
+| **インパクトなき新規性** | 「誰もXをやっていない」が、誰もXを必要としていない | 問題起点チェック。F1 |
+| **デフォルトで漸進的** | アイデアが benchmark で +2% に留まる | 抽象化のはしごを登る。F2 |
+| **複雑性崇拝** | 方法に8部品あり、それぞれの寄与が小さい | 単純性テスト。F7 |
+| **エコーチェンバー** | 同じ10本の論文からしかアイデアが出ない | 異分野からの移植。F4 |
+| **古い前提** | 「これは試されて失敗した」。5年前に | 何が変わったかを確認する。F5 |
+| **単一視点バイアス** | MLエンジニアの視点だけを考えている | ステークホルダーの回転。F8 |
+| **早すぎる収束** | 代替案を探索せず、最初のアイデアにコミットする | 発散フェーズを最後まで実行する |
+
+---
+
+## エージェント向け使用指示
+
+研究者が研究アイデアのブレインストーミング支援を求めた場合:
+
+1. **出発点を特定する**: 新しい領域を探索しているのか、現在のプロジェクトで詰まっているのか、既存アイデアを評価しているのか
+2. **適切なフレームワークを選ぶ**: フレームワーク選択ガイドを使い、関連するレンズを2から3個選ぶ
+3. **対話的にフレームワークを進める**: 各フレームワークを段階的に適用し、研究者に領域固有の入力を求める
+4. **候補を生成する**: 複数フレームワークを通じて、粗いアイデアを10から20個出す
+5. **絞り込みと順位付けを行う**: 収束フェーズのフィルタを適用し、上位3から5個に絞る
+6. **勝ち筋を洗練する**: 2文ピッチを明確化し、具体的な次ステップを定義する
+
+**重要原則**:
+- 具体性を求める。「効率を改善する」のような曖昧なアイデアは実行可能ではない
+- 前提に挑戦する。少なくとも3回は「なぜ」と問う
+- 棄却したものも含め、すべての候補をリストとして残す。後で再結合できる可能性がある
+- どのアイデアを追求するかの最終判断は研究者が行う。エージェントは構造化思考を支援する

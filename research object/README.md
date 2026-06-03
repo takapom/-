@@ -12,6 +12,9 @@
 6. [04_realtime_mission_modification.md](04_realtime_mission_modification.md): 実行中ミッション変更とリアルタイム性を研究に入れる意味、問い、実装境界
 7. [05_evaluation_parameters.md](05_evaluation_parameters.md): 数値評価の基準、主指標、補助指標、初期PoCで採用すべきパラメータ
 8. [06_experimental_design.md](06_experimental_design.md): 比較条件、タスクセット、正解ラベル、アブレーション、統計処理、ヒアリング事項
+9. [sitl_external_geo/README.md](sitl_external_geo/README.md): 辞書外地名の外部座標解決と長距離SITL実行で得た運用知見
+10. [nl_sitl_architecture/architecture.html](nl_sitl_architecture/architecture.html): 自然言語からSITLドローン制御までの現行アーキテクチャ図
+11. [presentations/uav_harness_progress_architecture.pptx](presentations/uav_harness_progress_architecture.pptx): 進捗状況と現行アーキテクチャをまとめた10枚構成のPPTX資料
 
 ## 現時点の結論
 
